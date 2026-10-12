@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 推理输出
+runs/
+
+# 模型权重（体积大，GitHub 单文件超 100MB 会被拒绝）
+*.pt
+*.onnx
+*.engine
+
+# 编辑器
+.vscode/
+.idea/
