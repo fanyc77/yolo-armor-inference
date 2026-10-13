@@ -1,9 +1,16 @@
-ultralytics>=8.3.0
-opencv-python>=4.9.0
-numpy>=1.24.0
-pillow>=10.0.0
-pyyaml>=6.0
+# 装甲板视频推理 —— 依赖清单
+# Python >= 3.9（已在 Python 3.13 上验证可安装）
 
-# 可选：导出 ONNX / TensorRT 时取消注释
-# onnx>=1.16.0
-# onnxruntime>=1.18.0
+# 推理框架：提供 YOLO 模型加载与推理接口
+# 注意：从 PyPI 默认源安装的是 CPU 版 torch；
+#       若要用 GPU，请先按 https://pytorch.org 的指引单独装 CUDA 版 torch。
+ultralytics>=8.4.0
+
+# 视频读写（infer.py 直接 import cv2）
+opencv-python>=4.9.0
+
+# ultralytics 会自动带上以下依赖，这里列出仅为说明，版本交给它决定：
+# torch>=2.6.0
+# numpy>=1.23.0
+# pillow>=10.0.0
+# pyyaml>=6.0
